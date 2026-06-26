@@ -38,23 +38,41 @@ React (Vite) · n8n · Vercel
 Lead Generation Form/
 
 ├── public/
+
 │   ├── favicon.svg
+
 │   └── icons.svg
+
 ├── src/
+
 │   ├── assets/
+
 │   │   ├── hero.png
+
 │   │   ├── react.svg
+
 │   │   └── vite.svg
+
 │   ├── App.jsx          # Main form component & logic
+
 │   ├── App.css          # All styling (theme: black/grey/white)
+
 │   ├── index.css        # Global resets
+
 │   └── main.jsx          # React entry point
+
 ├── .gitignore
+
 ├── eslint.config.js
+
 ├── index.html
+
 ├── package.json
+
 ├── package-lock.json
+
 ├── vite.config.js
+
 └── README.md
 
 ---
