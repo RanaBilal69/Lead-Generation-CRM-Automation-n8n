@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  background: #0d0d0d;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #1a1a1a 0%, #0a0a0a 100%);
+  padding: 24px;
+  overflow: hidden;
+}
+
+.split-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  width: 100%;
+  max-width: 980px;
+  height: 100%;
+  max-height: 600px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
+  border: 1px solid #2a2a2a;
+}
+
+/* LEFT PANEL */
+.brand-panel {
+  background: linear-gradient(160deg, #141414 0%, #050505 100%);
+  color: #fff;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #fff;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e5e5;
+  letter-spacing: 0.3px;
+}
+
+.brand-mid h1 {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.brand-mid p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #a0a0a0;
+}
+
+.brand-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #c4c4c4;
+}
+
+.trust-item svg {
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* RIGHT PANEL */
+.form-panel {
+  background: #fff;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.form-panel-header {
+  margin-bottom: 18px;
+}
+
+.form-panel-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.form-panel-header p {
+  font-size: 12.5px;
+  color: #8a8a8a;
+}
+
+.compact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #aaa;
+}
+
+.textarea-wrapper .input-icon {
+  top: 11px;
+  align-self: flex-start;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 9px 12px 9px 36px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #111;
+  background: #fafafa;
+  transition: all 0.2s ease;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #111;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.07);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b8b8b8;
+}
+
+.error {
+  color: #d62828;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 11px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #2e2e2e;
+}
+
+.submit-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* SUCCESS STATE */
+.success-state {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.success-icon {
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.success-state h2 {
+  font-size: 22px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.success-state p {
+  font-size: 13.5px;
+  color: #8a8a8a;
+  max-width: 320px;
+}
+
+/* RESPONSIVE: small screens fall back to single column, scroll allowed there only */
+@media (max-width: 760px) {
+  .page {
+    overflow-y: auto;
+    align-items: flex-start;
+    padding: 16px;
+  }
+  .split-card {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+  .brand-panel {
+    padding: 28px 24px;
+  }
+  .form-panel {
+    padding: 28px 24px;
+  }
+}
